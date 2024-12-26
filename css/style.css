@@ -134,48 +134,139 @@ section{
 }
 
 
-/* Full-screen home section with background image */
+/* Full-screen home section with background video */
 .home {
     position: relative;
-    height: 100vh; /* Full screen height */
-    width: 100%; /* Full screen width */
-    display: flex; /* Flexbox for content alignment */
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    overflow: hidden; /* Hide anything overflowing */
-  }
-  .home {
-    position: relative;
-    height: 100vh; /* Full screen height */
-    width: 100%; /* Full screen width */
-    display: flex; /* Flexbox for content alignment */
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    overflow: hidden; /* Hide anything overflowing */
-  }
-  
-  .video-container {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.home .swiper-container {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%; /* Full screen height */
-    width: 100%; /* Full screen width */
-    overflow: hidden;
-  }
-  
-  .home-video {
+    width: 100%;
+    height: 100vh;
+}
+
+.home .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.home .slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home .slide-bg img,
+.home .slide-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 6rem;
+    margin: 2rem auto;
+    max-width: 70rem;
+}
+
+/* Swiper navigation styles */
+.home .swiper-button-next,
+.home .swiper-button-prev {
+    color: #fff;
+}
+
+.home .swiper-pagination-bullet {
+    background: #fff;
+}
+
+.home .swiper-pagination-bullet-active {
+    background: var(--main-color);
+}
+
+/* Overlay to make content more readable */
+.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+  .swiper-slide video {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover; /* Ensure video covers the section */
-    opacity: 0.5; /* Adjust opacity to make the video subtle */
-    z-index: -1; /* Place video behind content */
+    object-fit: cover; /* Ensures the video covers the entire section */
+}
+  
+/* Swiper Slider Styles */
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
   }
   
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .swiper-slide img, .swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .swiper-button-next, .swiper-button-prev {
+    color: #fff;
+    z-index: 10;
+  }
+  
+
+
+  
+
+  
+  @media (max-width: 768px) {
+    .video-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    iframe {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+  
+
+
   
   
 /* Slider container positioned above the background */
@@ -302,7 +393,7 @@ section{
     padding:1rem;
 }
 
-.about .row .image img{ 
+.about .row .image img{
     width: 100%;
     border-radius: .5rem;
     border:1rem solid #333;
@@ -416,50 +507,75 @@ section{
     border-radius: 0.5rem;
 }
 
-.reivew .box{
-    border-radius: .5rem;
+/* Review Section */
+.review-section {
+    background: #181818;
+    padding: 50px 15px;
+    text-align: center;
+}
+
+.review-heading {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.review-heading span {
+    color: #007bff;
+}
+
+.review-slider {
+    padding: 20px;
+}
+
+.review-box {
     background: #333;
-    padding:2rem;
-    position: relative;
+    border-radius: 8px;
+    padding: 20px;
+    color: #eee;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.reivew .box .fa-quote-right{
-    position: absolute;
-    top:2rem; right: 2rem;
-    color:var(--main-color);
-    font-size: 5rem;
-}
-
-.reivew .box .user{
+.review-user {
     display: flex;
     align-items: center;
-    gap:1.5rem;
-    padding-bottom: 1rem;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
-.reivew .box .user img{
-    height:7rem;
-    width: 7rem;
+.review-user img {
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.reivew .box .user h3{
-    font-size: 2rem;
-    color:#fff;
-}
-
-.reivew .box .user span{
+.review-user h3 {
     font-size: 1.5rem;
-    color:#eee;
+    color: #fff;
 }
 
-.reivew .box p{
-    line-height: 2;
-    color:#eee;
-    padding:.5rem 0;
-    font-size: 1.6rem;
+.review-user span {
+    font-size: 1rem;
+    color: #aaa;
 }
+
+.review-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Swiper Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #007bff;
+}
+
+
 
 .contact form{
     max-width: 70rem;

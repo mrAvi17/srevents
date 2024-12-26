@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/style.css">
     
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     
@@ -53,48 +55,65 @@
 <!-- home section starts  -->
 
 <section class="home" id="home">
-    
-    <!-- Video slideshow container -->
-    <div class="video-container">
+    <div class="swiper-container home-slider">
+        <div class="swiper-wrapper">
+            <!-- Slide 1: Image -->
+            <div class="swiper-slide">
+                <div class="slide-bg">
+                    <video autoplay muted loop playsinline>
+                        <source src="images/video11.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Video -->
+            <div class="swiper-slide">
+                <div class="slide-bg">
+                    <video autoplay muted loop playsinline>
+                        <source src="images/video22.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+
+             <!-- Slide 4: Image -->
+
+        <div class="swiper-slide">
+            <div class="slide-bg">
+                <video autoplay muted loop playsinline>
+                    <source src="images/video33.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+            
+            <!-- Slide 3: Image -->
+            <div class="swiper-slide">
+                <div class="slide-bg">
+                    <img src="images/image2.jpeg" alt="Slide 3" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Image -->
+
+        <div class="swiper-slide">
+            <div class="slide-bg">
+                <video autoplay muted loop playsinline>
+                    <source src="images/video33.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
         
-        <div class="video-container" style="padding:56.25% 0 0 0;position:relative;">
-            <iframe 
-              src="https://player.vimeo.com/video/1041542974?autoplay=1&loop=1&muted=1&background=1&title=0&byline=0&portrait=0" 
-              frameborder="0" 
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-              style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-              title="homebg14">
-            </iframe>
-          </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
-          
-    
+        <!-- Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 
     <!-- Content overlay -->
     <div class="content">
-        <h3>Celebrate in Style with the Ultimate Event Architect <span> event organizers </span></h3>
-        <!-- WhatsApp URL with encoded message -->
+        <h3>Celebrate in Style with the Ultimate Event Architect <span>event organizers</span></h3>
         <a href="https://wa.me/917667523203?text=Hello%2C%20I%20am%20interested%20in%20your%20event%20services%21" class="btn" target="_blank">Contact Us</a>
     </div>
-    
-
-    
-
-    <div class="swiper-container home-slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/slide-1.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/slide5.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/slide3.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/slide4.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/slide6.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/slide7.jpeg" alt=""></div>
-            <div class="swiper-slide"><img src="images/slide1.avif" alt=""></div>
-        </div>
-    </div>
-
-    
-
 </section>
 
 <!-- home section ends -->
@@ -362,71 +381,82 @@
 
 <!-- price section ends -->
 
-<!-- review section starts  -->
+<section class="review-section" id="review">
+    <h1 class="review-heading">CLIENT'S <span>REVIEW</span></h1>
 
-<section class="reivew" id="review">
-    
-    <h1 class="heading">client's <span>review</span></h1>
-
-    <div class="review-slider swiper-container">
-
+    <div class="swiper review-slider">
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                
-                <div class="user">
-                    <img src="images/malelogo.jpg" alt="">
-                    <div class="user-info">
-                        <h3>Aarav Sharma</h3>
-                        <span>happy clients</span>
-                    </div>
-                </div>
-                <p>Absolutely thrilled with the service! The team was highly responsive and professional. The process was smooth, and I felt assured throughout. I would definitely recommend them to others.</p>
-            </div>
-
-            <div class="swiper-slide box">
-                
-                <div class="user">
-                    <img src="images/femalelogo.jpg" alt="">
-                    <div class="user-info">
-                        <h3>Priya Gupta</h3>
-                        <span>happy clients</span>
-                    </div>
-                </div>
-                <p>This is by far one of the best services I’ve received. The quality of work exceeded my expectations, and the team went above and beyond to ensure everything was perfect. Great experience!</p>
-            </div>
-
-            <div class="swiper-slide box">
-            
-                <div class="user">
-                    <img src="images/malelogo.jpg" alt="">
-                    <div class="user-info">
-                        <h3>Rohan Desai</h3>
-                        <span>happy clients</span>
-                    </div>
-                </div>
-                <p>I was impressed with how efficient and courteous the staff were. They handled everything professionally and kept me informed at every stage. I’m very satisfied with the results.</p>
-            </div>
-
-            <div class="swiper-slide box">
-                
-                <div class="user">
-                    <img src="images/femalelogo.jpg" alt="">
-                    <div class="user-info">
+            <!-- Slide 1 -->
+            <div class="swiper-slide review-box">
+                <div class="review-user">
+                    <img src="images/femalelogo.jpg" alt="Ananya Iyer">
+                    <div>
                         <h3>Ananya Iyer</h3>
-                        <span>happy clients</span>
+                        <span>Happy Clients</span>
                     </div>
                 </div>
-                <p>An exceptional experience! The service was quick, and the quality was outstanding. I’m very pleased with how everything turned out, and I’ll definitely be back for more.</p>
+                <p>
+                    An exceptional experience! The service was quick, and the quality
+                    was outstanding. I'm very pleased with how everything turned out, and
+                    I'll definitely be back for more.
+                </p>
             </div>
 
+            <!-- Slide 2 -->
+            <div class="swiper-slide review-box">
+                <div class="review-user">
+                    <img src="images/malelogo.jpg" alt="Aarav Sharma">
+                    <div>
+                        <h3>Aarav Sharma</h3>
+                        <span>Happy Clients</span>
+                    </div>
+                </div>
+                <p>
+                    Absolutely thrilled with the service! The team was highly
+                    responsive and professional. The process was smooth, and I felt
+                    assured throughout. I would definitely recommend them to others.
+                </p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide review-box">
+                <div class="review-user">
+                    <img src="images/femalelogo.jpg" alt="Priya Gupta">
+                    <div>
+                        <h3>Priya Gupta</h3>
+                        <span>Happy Clients</span>
+                    </div>
+                </div>
+                <p>
+                    This is by far one of the best services I've received. The quality
+                    of work exceeded my expectations, and the team went above and beyond
+                    to ensure everything was perfect. Great experience!
+                </p>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide review-box">
+                <div class="review-user">
+                    <img src="images/malelogo.jpg" alt="Rohan Desai">
+                    <div>
+                        <h3>Rohan Desai</h3>
+                        <span>Happy Clients</span>
+                    </div>
+                </div>
+                <p>
+                    I was impressed with how efficient and courteous the staff were.
+                    They handled everything professionally and kept me informed at every
+                    stage. I'm very satisfied with the results.
+                </p>
+            </div>
         </div>
 
+        <!-- Navigation Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
-
 </section>
 
-<!-- review section ends -->
 
 <!-- contact section starts  -->
 
